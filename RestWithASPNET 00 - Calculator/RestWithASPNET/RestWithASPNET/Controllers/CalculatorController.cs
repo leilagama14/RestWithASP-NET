@@ -7,16 +7,29 @@ using Remotion.Linq.Utilities;
 
 namespace RestWithASPNET.Controllers
 {
-    [Route("api/[controller]")]  
+    [Route("api/[controller]")]
     public class CalculatorController : Controller
     {
         // GET api/values/5
-        [HttpGet("{firstNumber}/{secundNumber}")]
+        [HttpGet("sum/{firstNumber}/{secundNumber}")]
         public IActionResult Sum(string firstNumber, string secundNumber)
         {
-            if ( IsNumeric(firstNumber) && IsNumeric(secundNumber) )
+            if (IsNumeric(firstNumber) && IsNumeric(secundNumber))
             {
                 var sum = ConvertToDecimal(firstNumber) + ConvertToDecimal(secundNumber);
+                return Ok(sum.ToString());
+            }
+
+            return BadRequest("Invalid Input");
+        }
+
+        // GET api/values/5
+        [HttpGet("subtraction/{firstNumber}/{secundNumber}")]
+        public IActionResult Subtraction(string firstNumber, string secundNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secundNumber))
+            {
+                var sum = ConvertToDecimal(firstNumber) - ConvertToDecimal(secundNumber);
                 return Ok(sum.ToString());
             }
 
@@ -27,7 +40,7 @@ namespace RestWithASPNET.Controllers
         {
             decimal decimalValue;
 
-            if (decimal.TryParse(number, out  decimalValue))
+            if (decimal.TryParse(number, out decimalValue))
             {
                 return decimalValue;
             }
@@ -43,5 +56,6 @@ namespace RestWithASPNET.Controllers
 
             return isNumber;
         }
+
     }
 }
