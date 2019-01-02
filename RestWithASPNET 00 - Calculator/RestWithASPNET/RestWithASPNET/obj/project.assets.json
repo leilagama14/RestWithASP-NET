@@ -11506,11 +11506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Udemy\\RestWithASP-NET\\RestWithASPNET\\RestWithASPNET\\RestWithASPNET.csproj",
+      "projectUniqueName": "C:\\Udemy\\RestWithASP-NET\\RestWithASPNET 00 - Calculator\\RestWithASPNET\\RestWithASPNET\\RestWithASPNET.csproj",
       "projectName": "RestWithASPNET",
-      "projectPath": "C:\\Udemy\\RestWithASP-NET\\RestWithASPNET\\RestWithASPNET\\RestWithASPNET.csproj",
+      "projectPath": "C:\\Udemy\\RestWithASP-NET\\RestWithASPNET 00 - Calculator\\RestWithASPNET\\RestWithASPNET\\RestWithASPNET.csproj",
       "packagesPath": "C:\\Users\\leigama\\.nuget\\packages\\",
-      "outputPath": "C:\\Udemy\\RestWithASP-NET\\RestWithASPNET\\RestWithASPNET\\obj\\",
+      "outputPath": "C:\\Udemy\\RestWithASP-NET\\RestWithASPNET 00 - Calculator\\RestWithASPNET\\RestWithASPNET\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
