@@ -10,7 +10,7 @@ namespace RestWithASPNET.Controllers
     [Route("api/[controller]")]
     public class CalculatorController : Controller
     {
-        // GET api/values/sum/5
+        // GET api/sum/5
         [HttpGet("sum/{firstNumber}/{secundNumber}")]
         public IActionResult Sum(string firstNumber, string secundNumber)
         {
@@ -23,7 +23,7 @@ namespace RestWithASPNET.Controllers
             return BadRequest("Invalid Input");
         }
 
-        // GET api/values/subtraction/5
+        // GET api/subtraction/5
         [HttpGet("subtraction/{firstNumber}/{secundNumber}")]
         public IActionResult Subtraction(string firstNumber, string secundNumber)
         {
@@ -36,7 +36,7 @@ namespace RestWithASPNET.Controllers
             return BadRequest("Invalid Input");
         }
 
-        // GET api/values/division/5
+        // GET api/division/5
         [HttpGet("division/{firstNumber}/{secundNumber}")]
         public IActionResult Division(string firstNumber, string secundNumber)
         {
@@ -49,7 +49,7 @@ namespace RestWithASPNET.Controllers
             return BadRequest("Invalid Input");
         }
 
-        // GET api/values/multiplication/5
+        // GET api/multiplication/5
         [HttpGet("multiplication/{firstNumber}/{secundNumber}")]
         public IActionResult Multiplication(string firstNumber, string secundNumber)
         {
@@ -62,7 +62,7 @@ namespace RestWithASPNET.Controllers
             return BadRequest("Invalid Input");
         }
 
-        // GET api/values/mean/5
+        // GET api/mean/5
         [HttpGet("mean/{firstNumber}/{secundNumber}")]
         public IActionResult Mean(string firstNumber, string secundNumber)
         {
@@ -75,7 +75,7 @@ namespace RestWithASPNET.Controllers
             return BadRequest("Invalid Input");
         }
 
-        // GET api/values/square-root/5
+        // GET api/square-root/5
         [HttpGet("square-root/{number}")]
         public IActionResult SquareRoot(string number)
         {
