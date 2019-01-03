@@ -17,7 +17,6 @@ C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithA
 C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithASPNET\bin\Debug\netcoreapp2.1\RestWithASPNET.runtimeconfig.dev.json
 C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithASPNET\bin\Debug\netcoreapp2.1\RestWithASPNET.dll
 C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithASPNET\bin\Debug\netcoreapp2.1\RestWithASPNET.pdb
-C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithASPNET\obj\Debug\netcoreapp2.1\RestWithASPNET.csprojAssemblyReference.cache
 C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithASPNET\obj\Debug\netcoreapp2.1\RestWithASPNET.csproj.CoreCompileInputs.cache
 C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithASPNET\obj\Debug\netcoreapp2.1\RestWithASPNET.RazorAssemblyInfo.cache
 C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithASPNET\obj\Debug\netcoreapp2.1\RestWithASPNET.RazorAssemblyInfo.cs
@@ -26,3 +25,4 @@ C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithA
 C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithASPNET\obj\Debug\netcoreapp2.1\RestWithASPNET.RazorTargetAssemblyInfo.cache
 C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithASPNET\obj\Debug\netcoreapp2.1\RestWithASPNET.dll
 C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithASPNET\obj\Debug\netcoreapp2.1\RestWithASPNET.pdb
+C:\Udemy\RestWithASP-NET\RestWithASPNET 00 - Calculator\RestWithASPNET\RestWithASPNET\obj\Debug\netcoreapp2.1\RestWithASPNET.csprojAssemblyReference.cache
