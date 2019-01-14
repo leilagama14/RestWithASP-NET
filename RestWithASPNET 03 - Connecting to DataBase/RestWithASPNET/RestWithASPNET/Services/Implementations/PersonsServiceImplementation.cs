@@ -5,11 +5,19 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
 using System.Threading.Tasks;
 using RestWithASPNET.Model;
+using RestWithASPNET.Model.Context;
 
 namespace RestWithASPNET.Services.Implementations
 {
     public class PersonsServiceImplementation : IPersonService
     {
+        public MySQLContext _context;
+
+        public PersonsServiceImplementation(MySQLContext context)
+        {
+            _context = context;
+        }
+        
         //Contador responsával por gerar um fake ID já que não estamos 
         //acessando nenhum banco de dados.
         private volatile int count;
@@ -17,7 +25,17 @@ namespace RestWithASPNET.Services.Implementations
         //Cria uma nova pessoa.
         public Person Create(Person person)
         {
-            return  person;
+            try
+            {
+                _context.Add(person);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return person;
         }
 
         //Deleta a partir de um ID.
