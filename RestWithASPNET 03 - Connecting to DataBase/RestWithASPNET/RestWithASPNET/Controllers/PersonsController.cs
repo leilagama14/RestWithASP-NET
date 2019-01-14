@@ -7,8 +7,9 @@ namespace RestWithASPNET.Controllers
     /*Mapeia as requisições de http://localhost:{porta}/api/person
      Por padrão o ASP .NET Core mapeia todas as classes que extendem Controller
      pegando a primeira parte do nome da classe em lower case [PersonS]Controller
-     e expões como endpoint REST*/
-    [Route("api/[controller]")]
+     e expõe como endpoint REST*/
+    [ApiVersion("1")]
+    [Route("api/[controller]/v{version:apiVersion}")]     
     public class PersonsController : Controller
     {
         //Declaração do serviço usado

@@ -28,7 +28,8 @@ namespace RestWithASPNET
 
             //Add framework servives.
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            //services.AddMvc();
+
+            services.AddApiVersioning();
 
             //Dependecy Injection
             services.AddScoped<IPersonService, PersonsServiceImplementation>();
