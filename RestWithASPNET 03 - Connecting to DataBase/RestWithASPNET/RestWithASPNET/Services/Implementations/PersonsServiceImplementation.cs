@@ -62,18 +62,6 @@ namespace RestWithASPNET.Services.Implementations
             return _context.Persons.ToList();
         }
 
-        private Person MockPerson(int i)
-        {
-            return new Person
-            {
-                Address = "Some Address " + i,
-                FirstName = "Person Name " + i,
-                Gender = "Female",
-                Id = IncrementAndGet(),
-                LastName = "Person LastName"
-            };
-        }
-
         private long IncrementAndGet()
         {
             return Interlocked.Increment(ref count);
