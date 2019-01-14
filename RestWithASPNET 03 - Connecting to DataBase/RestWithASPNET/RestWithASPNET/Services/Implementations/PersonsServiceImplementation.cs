@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Query.Expressions;
 using RestWithASPNET.Model;
 using RestWithASPNET.Model.Context;
 
@@ -38,24 +39,27 @@ namespace RestWithASPNET.Services.Implementations
             return person;
         }
 
-        //Deleta a partir de um ID.
+        //Deleta a partir de um iD.
         public void Delete(long id)
         {
+            var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
+
+            try
+            {
+                if (result != null) _context.Persons.Remove(result);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             
         }
 
         //Lista de pessoas
         public List<Person> FindAll()
         {
-            List<Person> persons = new List<Person>();
-            for (int i = 0; i < 8; i++)
-            {
-                Person person = MockPerson(i);
-
-                persons.Add(person);
-            }
-
-            return persons;
+            return _context.Persons.ToList();
         }
 
         private Person MockPerson(int i)
@@ -77,19 +81,31 @@ namespace RestWithASPNET.Services.Implementations
 
         public Person FindById(long id)
         {
-            return  new Person
-            {
-                Address = "Salvador/Bahia",
-                FirstName = "Leila",
-                Gender = "Female",
-                Id = 1,
-                LastName = "Gama"
-            };
+            return _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
         }
 
         public Person Update(Person person)
         {
+            if (!Exist(person.Id)) return new Person();
+
+            var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(person.Id));
+
+            try
+            {
+                _context.Entry(result).CurrentValues.SetValues(person);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
             return person;
+        }
+
+        private bool Exist(long? id)
+        {
+            return _context.Persons.Any(p => p.Id.Equals(id));
         }
     }
 }
