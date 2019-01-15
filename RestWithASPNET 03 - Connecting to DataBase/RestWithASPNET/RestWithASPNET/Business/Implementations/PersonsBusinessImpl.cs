@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore.Query.Expressions;
+using RestWithASPNET.Business;
 using RestWithASPNET.Model;
 using RestWithASPNET.Model.Context;
 
 namespace RestWithASPNET.Services.Implementations
 {
-    public class PersonsServiceImplementation : IPersonService
+    public class PersonsBusinessImpl : IPersonBusiness
     {
         public MySQLContext _context;
 
-        public PersonsServiceImplementation(MySQLContext context)
+        public PersonsBusinessImpl(MySQLContext context)
         {
             _context = context;
         }

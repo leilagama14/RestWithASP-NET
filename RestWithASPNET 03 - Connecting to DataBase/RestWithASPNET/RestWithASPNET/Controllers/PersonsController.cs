@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RestWithASPNET.Business;
 using RestWithASPNET.Model;
-using RestWithASPNET.Services.Implementations;
 
 namespace RestWithASPNET.Controllers
 {
@@ -13,10 +13,10 @@ namespace RestWithASPNET.Controllers
     public class PersonsController : Controller
     {
         //Declaração do serviço usado
-        private IPersonService _personService;
+        private IPersonBusiness _personService;
 
         /*Injeção de uma instância de IpersonService ao criar uma instancia de PersonController.*/
-        public PersonsController(IPersonService personService)
+        public PersonsController(IPersonBusiness personService)
         {
             _personService = personService;
         }

@@ -1,12 +1,9 @@
 ﻿using RestWithASPNET.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace RestWithASPNET.Services.Implementations
+namespace RestWithASPNET.Business
 {
-   public interface IPersonService
+    public interface IPersonBusiness
     {
         Person Create(Person person);
 
