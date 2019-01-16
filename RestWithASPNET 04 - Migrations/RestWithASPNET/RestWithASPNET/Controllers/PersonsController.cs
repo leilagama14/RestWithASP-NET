@@ -59,7 +59,7 @@ namespace RestWithASPNET.Controllers
         {
             if (person == null) return BadRequest();
             var updatedPerson = _personBusiness.Update(person);
-            if (updatedPerson == null) return BadRequest();
+            if (updatedPerson == null) return NoContent();
             return new ObjectResult(updatedPerson);
         }
 
